@@ -22,7 +22,7 @@ class CursoController extends Controller
             ]
         ];
         
-        return view('apresentacao', [
+        return view('curso-listagem', [
             'objetos' => $dados
         ]);
     }

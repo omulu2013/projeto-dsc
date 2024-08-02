@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/apresentacao', [ CursoController::class, 'index' ]);
+Route::get('/curso-listagem', [ CursoController::class, 'index' ]);
 
 /*Route::get('/apresentacao', function () {
     return view('apresentacao');
