@@ -16,3 +16,6 @@ Route::get('/curso-listagem', [ CursoController::class, 'index' ]);
 Route::get('/apresentacao-disciplina', function () {
     return view('disciplina');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
