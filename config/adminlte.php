@@ -296,7 +296,7 @@ return [
     'menu' => [
         ['header' => 'Cadastros'],
         [
-            'text' => 'Curso',
+            'text' => 'Cursos',
             'url' => '/curso-listagem',
             'icon' => 'fas fa-fw fa-user',
         ],
