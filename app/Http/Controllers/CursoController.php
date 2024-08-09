@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Curso;
 
 class CursoController extends Controller
 {
@@ -11,16 +12,7 @@ class CursoController extends Controller
      */
     public function index()
     {
-        $dados = [
-            0 => [
-                'nome' => 'Marlon',
-                'idade' => 29
-            ],
-            1 => [
-                'nome' => 'Gomes',
-                'idade' => 37
-            ]
-        ];
+        $dados = Curso::all();
         
         return view('curso-listagem', [
             'objetos' => $dados
