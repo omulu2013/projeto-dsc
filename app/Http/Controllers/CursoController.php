@@ -54,7 +54,16 @@ class CursoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $dado = Curso::find($id);
+
+        if($dado){
+            return view('curso-alterar', 
+                        ['objeto' => $dado]
+                    );
+        }else{
+            return redirect()->back();
+        }
+        
     }
 
     /**
