@@ -12,6 +12,7 @@ Route::get('/curso-cadastro', [ CursoController::class, 'create' ])->name('curso
 Route::post('/curso-salvar',  [ CursoController::class, 'store' ])->name('curso.salvar');
 Route::get('/curso-alterar/{id}',  [ CursoController::class, 'edit' ])->name('curso.alterar');
 Route::put('/curso-atualizar/{id}',  [ CursoController::class, 'update' ])->name('curso.atualizar');
+Route::get('/curso-deletar/{id}',  [ CursoController::class, 'destroy' ])->name('curso.deletar');
 
 /*Route::get('/apresentacao', function () {
     return view('apresentacao');

@@ -12,14 +12,15 @@
         <tr>
             <th>ID</th>
             <th>Nome</th>
-            <th>Ações</th>
+            <th colspan="2" class="text-center" >Ações</th>
         </tr>
 
         @forelse($objetos as $objeto)
         <tr>
             <td> {{ $objeto['id'] }} </td>
             <td> {{ $objeto['nome'] }} </td>
-            <td> <a href="{{ route('curso.alterar', ['id' => $objeto['id']] ) }}">Alterar</a> </td>
+            <td class="text-center"> <a href="{{ route('curso.alterar', ['id' => $objeto['id']] ) }}">Alterar</a> </td>
+            <td class="text-center"> <a href="{{ route('curso.deletar', ['id' => $objeto['id']] ) }}">Deletar</a> </td>
         </tr>
         @empty
         <tr>

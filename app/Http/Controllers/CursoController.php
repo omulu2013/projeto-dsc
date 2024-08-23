@@ -71,7 +71,17 @@ class CursoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+      
+        $dados_formulario = $request->all();
+        $registro_recuperado = Curso::find($id);
+
+        if($registro_recuperado){
+            $registro_recuperado->update($dados_formulario);
+            return redirect()->route('curso.listagem');
+    
+        }else{
+            return redirect()->back();
+        }
     }
 
     /**
@@ -79,6 +89,14 @@ class CursoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $registro_recuperado = Curso::find($id);
+
+        if($registro_recuperado){
+            $registro_recuperado->delete();
+            return redirect()->route('curso.listagem');
+        }else{
+
+            return redirect()->back();
+        }
     }
 }
