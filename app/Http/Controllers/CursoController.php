@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Curso;
+use App\Http\Requests\CursoRequest;
 
 class CursoController extends Controller
 {
@@ -30,9 +31,9 @@ class CursoController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CursoRequest $request)
     {
-        $dados_formulario = $request->all();
+        $dados_formulario = $request->validate();
 
         $retorno = Curso::create($dados_formulario);
 
